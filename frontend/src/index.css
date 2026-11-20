@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #060608;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-haki {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Custom Shanks Conqueror's Haki Glow & Effects */
+.haki-aura-bg {
+  background: radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.15) 0%, rgba(10, 10, 15, 0) 70%),
+              radial-gradient(circle at 10% 30%, rgba(185, 28, 28, 0.08) 0%, rgba(6, 6, 8, 0) 50%),
+              #060608;
+}
+
+/* Sharp angled clip paths for cards and badges */
+.clip-sharp {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.clip-sharp-sm {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+/* Custom Red Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #7f1d1d;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Red lightning aura border */
+.haki-border {
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  transition: all 0.25s ease-in-out;
+}
+.haki-border:hover {
+  border-color: rgba(239, 68, 68, 0.7);
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.25);
+}
+
+.haki-border-active {
+  border-color: #ef4444;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.4), inset 0 0 10px rgba(220, 38, 38, 0.2);
+}
